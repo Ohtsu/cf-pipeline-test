@@ -1,0 +1,54 @@
+version: '1.0'
+stages:
+ - prepare
+ - test
+ - build
+ - scan
+ - integration
+ - deploy
+steps:
+    step1:
+        stage: 'prepare'
+        image: node
+        commands:
+            - 'echo "Hello Step 1!"'
+    step2:
+       image: node
+       stage: 'prepare'
+       commands:
+            - 'echo "Hello Step 2!"'
+    step3:
+        image: node
+        stage: 'test'
+        commands:
+            - 'echo "Hello Step 3!"'
+    step4:
+        image: node
+        stage: 'build'
+        commands:
+            - 'echo "Hello Step 4!"'
+    step5:
+        image: node
+        stage: 'scan'
+        commands:
+            - 'echo "Hello Step 5!"'
+    step6:
+        image: node
+        stage: 'scan'
+        commands:
+            - 'echo "Hello Step 6!"'
+    step7:
+        image: node
+        stage: 'integration'
+        commands:
+            - 'echo "Hello Step 7!"'        
+    step8:
+        image: node
+        stage: 'deploy'
+        commands:
+            - 'echo "Hello Step 8!"'    
+    step9:
+        image: node
+        stage: 'deploy'
+        commands:
+            - 'echo "Hello Step 9!"'    
